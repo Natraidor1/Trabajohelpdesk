@@ -43,7 +43,7 @@
         app:srcCompat="@drawable/ticket" />
 
     <EditText
-        android:id="@+id/txtContraseña"
+        android:id="@+id/txtContrasenaa"
         android:layout_width="319dp"
         android:layout_height="56dp"
         android:layout_marginTop="64dp"
@@ -85,7 +85,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtContraseña"
+        app:layout_constraintTop_toBottomOf="@+id/txtContrasenaa"
         app:layout_constraintVertical_bias="0.368" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
