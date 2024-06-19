@@ -65,8 +65,8 @@
 
     <EditText
         android:id="@+id/txtDescripcion"
-        android:layout_width="289dp"
-        android:layout_height="116dp"
+        android:layout_width="282dp"
+        android:layout_height="52dp"
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Descripcion del ticket"
@@ -141,16 +141,15 @@
         android:id="@+id/btnVerTickets"
         android:layout_width="181dp"
         android:layout_height="70dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
         android:backgroundTint="#FFFFFF"
         android:text="Ver tickets"
         android:textColor="#404040"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.483" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -169,10 +168,11 @@
         android:layout_height="74dp"
         android:layout_marginBottom="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnVerTickets"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintEnd_toStartOf="@+id/btnVerTickets"
+        app:layout_constraintHorizontal_bias="0.522"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar"
+        app:layout_constraintVertical_bias="0.692"
         app:srcCompat="@drawable/observar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

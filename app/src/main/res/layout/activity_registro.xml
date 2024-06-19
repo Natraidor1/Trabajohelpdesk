@@ -12,7 +12,7 @@
     <View
         android:id="@+id/view1"
         android:layout_width="412dp"
-        android:layout_height="892dp"
+        android:layout_height="881dp"
         android:background="@drawable/diseno1registro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
