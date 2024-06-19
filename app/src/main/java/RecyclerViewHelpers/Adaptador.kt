@@ -40,7 +40,7 @@ class Adaptador (var Datos: List<dataClassTickets>): RecyclerView.Adapter<ViewHo
             val objConexion = ClaseConexion().cadenaConexion()
 
             val deleteTicket =
-                objConexion?.prepareStatement("DELETE Tickets WHERE titulo_ticket = ?")!!
+                objConexion?.prepareStatement("DELETE Tickets WHERE tituloTicket = ?")!!
 
             deleteTicket.setString(1, nombreTicket)
             deleteTicket.executeUpdate()
@@ -71,7 +71,7 @@ class Adaptador (var Datos: List<dataClassTickets>): RecyclerView.Adapter<ViewHo
             val objConexion = ClaseConexion().cadenaConexion()
 
             val updateTicket =
-                objConexion?.prepareStatement("UPDATE Tickets SET estado_ticket = ? WHERE uuid = ?")!!
+                objConexion?.prepareStatement("UPDATE Tickets SET estadoTicket = ? WHERE uuid = ?")!!
 
             updateTicket.setString(1, nuevoEstado)
             updateTicket.setString(2, uuid)

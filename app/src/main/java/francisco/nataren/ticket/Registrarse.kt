@@ -33,9 +33,9 @@ class Registrarse : AppCompatActivity() {
 
         val btnCrear = findViewById<Button>(R.id.btnCrearCuenta)
 
-        val txtUsername = findViewById<EditText>(R.id.txtCrearUsuario)
+        val txtUsuario = findViewById<EditText>(R.id.txtCrearUsuario)
 
-        val txtPassword = findViewById<EditText>(R.id.txtContrasena)
+        val txtContrasena = findViewById<EditText>(R.id.txtContrasena)
 
 
 
@@ -44,11 +44,11 @@ class Registrarse : AppCompatActivity() {
                 val objConexion = ClaseConexion().cadenaConexion()
 
 
-                val crearUsuario = objConexion?.prepareStatement("INSERT INTO Usuarios(UUID, nombre_usuario, contraseña_usuario) VALUES (?, ?, ?)")!!
+                val crearUsuario = objConexion?.prepareStatement("INSERT INTO Usuarios(UUID, nombreUsuario, contraseñaUsuario) VALUES (?, ?, ?)")!!
 
                 crearUsuario.setString(1, UUID.randomUUID().toString())
-                crearUsuario.setString(2, txtUsername.text.toString())
-                crearUsuario.setString(3, txtPassword.text.toString())
+                crearUsuario.setString(2, txtUsuario.text.toString())
+                crearUsuario.setString(3, txtContrasena.text.toString())
                 crearUsuario.executeUpdate()
 
                 withContext(Dispatchers.Main) {
@@ -58,8 +58,12 @@ class Registrarse : AppCompatActivity() {
                         Toast.LENGTH_LONG
                     ).show()
 
-                    txtUsername.text.clear()
-                    txtPassword.text.clear()
+                    txtUsuario.text.clear()
+                    txtContrasena.text.clear()
+
+                    val intent = Intent(this@Registrarse, MainActivity::class.java)
+                    startActivity(intent)
+                    finish()
                 }
             }
         }

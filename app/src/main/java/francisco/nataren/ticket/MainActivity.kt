@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
                 val objConexion = ClaseConexion().cadenaConexion()
 
 
-                val checkUser = objConexion?.prepareStatement("SELECT * FROM Usuarios WHERE nombre_usuario = ? AND contraseña_usuario = ?")!!
+                val checkUser = objConexion?.prepareStatement("SELECT * FROM Usuarios WHERE nombreUsuario = ? AND contraseñaUsuario = ?")!!
                 checkUser.setString(1, txtUsuario.text.toString())
                 checkUser.setString(2, txtContrasena.text.toString())
 
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
                     startActivity(pantallaPrincipal)
                 } else {
                     withContext(Dispatchers.Main) {
-                        Toast.makeText(this@MainActivity, "Usuario o contraseña fueron escritos de manera incorrecta", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@MainActivity, "El usuario o contraseña fueron escritos de manera incorrecta", Toast.LENGTH_SHORT).show()
                     }
                 }
             }
